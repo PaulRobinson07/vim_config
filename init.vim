@@ -12,6 +12,9 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+
 call plug#end()
 
 "colorscheme settings
@@ -32,6 +35,12 @@ syntax enable
 
 "turns on advanced syntax highlighting with treesitter
 lua require'nvim-treesitter.configs'.setup{highlight={enable=true}}
+
+"enables telescope basic functions
+nnoremap ff :Telescope find_files<CR>
+nnoremap fg :Telescope live_grep<CR>
+nnoremap fb :Telescope buffers<CR>
+nnoremap fh :Telescope help_tags<CR>
 
 "shows my cursor spot and highlights the line I'm on
 set cursorline
