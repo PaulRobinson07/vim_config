@@ -14,6 +14,7 @@ Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-tree/nvim-web-devicons'
 
 call plug#end()
 
@@ -29,9 +30,6 @@ let g:airline_theme='atomic'
 
 "turns on the airline theme
 let g:airline#extensions#tabline#enabled = 1
-
-"turns on syntax highlighting
-syntax enable
 
 "turns on advanced syntax highlighting with treesitter
 lua require'nvim-treesitter.configs'.setup{highlight={enable=true}}
@@ -62,4 +60,4 @@ set shiftwidth=4
 
 "turns on folding and unfolding with zo and zc respectively
 "useful for longer files
-set foldmethod=indent
+set foldmethod=syntax
