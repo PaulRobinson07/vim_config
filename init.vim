@@ -15,6 +15,8 @@ Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-tree/nvim-web-devicons'
+Plug 'folke/noice.nvim'
+Plug 'MunifTanjim/nui.nvim'
 
 call plug#end()
 
@@ -24,6 +26,9 @@ colorscheme gruvbox
 
 "changes the colors so the colors show up correctly
 set t_Co=256
+
+"sets up the popup for commands
+lua require("noice").setup()
 
 "sets the bottom of the screen color scheme
 let g:airline_theme='atomic'
