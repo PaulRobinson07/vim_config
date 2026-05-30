@@ -19,7 +19,7 @@ Plug 'folke/noice.nvim'
 Plug 'MunifTanjim/nui.nvim'
 Plug 'chomosuke/typst-preview.nvim', {'tag': 'v1.*'}
 Plug 'kaarmu/typst.vim'
-Plug 'tribela/vim-transparent'
+"Plug 'tribela/vim-transparent'
 
 call plug#end()
 
